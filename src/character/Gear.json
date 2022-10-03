@@ -1,208 +1,288 @@
 {
     "dungeoneeringGear": [
-        "Rope, 50 feet",
-        "Pulleys",
-        "Candles, 5",
-        "Chain, 10 feet",
-        "Chalk, 10",
-        "Crowbar",
-        "Tinderbox",
-        "Grappling hook",
-        "Hammer",
-        "Waterskin",
-        "Lantern",
-        "Lamp oil",
-        "Padlock",
-        "Manacles",
-        "Mirror",
-        "Pole, 10 feet",
-        "Sack",
-        "Tent",
-        "Spikes, 5",
-        "Torches, 5"
+      "Rope, 50 feet",
+      "Pulleys",
+      "Candles, 5",
+      "Chain, 10 feet",
+      "Chalk, 10",
+      "Crowbar",
+      "Tinderbox",
+      "Grappling hook",
+      "Hammer",
+      "Waterskin",
+      "Lantern",
+      "Lamp oil",
+      "Padlock",
+      "Manacles",
+      "Mirror",
+      "Pole, 10 feet",
+      "Sack",
+      "Tent",
+      "Spikes, 5",
+      "Torches, 5"
     ],
     "generalGear1": [
-        "Air bladder",
-        "Bear trap",
-        "Shovel",
-        "Bellows",
-        "Grease",
-        "Saw",
-        "Bucket",
-        "Caltrops",
-        "Chisel",
-        "Drill",
-        "Fish. rod",
-        "Marbles",
-        "Glue",
-        "Pick",
-        "Hourglass",
-        "Net",
-        "Tongs",
-        "Lockpicks",
-        "Metal file",
-        "Nails"
+      "Air bladder",
+      "Bear trap",
+      "Shovel",
+      "Bellows",
+      "Grease",
+      "Saw",
+      "Bucket",
+      "Caltrops",
+      "Chisel",
+      "Drill",
+      "Fish. rod",
+      "Marbles",
+      "Glue",
+      "Pick",
+      "Hourglass",
+      "Net",
+      "Tongs",
+      "Lockpicks",
+      "Metal file",
+      "Nails"
     ],
     "generalGear2": [
-        "Incense",
-        "Sponge",
-        "Lens",
-        "Perfume",
-        "Horn",
-        "Bottle",
-        "Soap",
-        "Spyglass",
-        "Tar pot",
-        "Twine",
-        "Fake jewels",
-        "Blank book",
-        "Card deck",
-        "Dice set",
-        "Cook pots",
-        "Face paint",
-        "Whistle",
-        "Instrument",
-        "Quill & Ink",
-        "Small bell"
+      "Incense",
+      "Sponge",
+      "Lens",
+      "Perfume",
+      "Horn",
+      "Bottle",
+      "Soap",
+      "Spyglass",
+      "Tar pot",
+      "Twine",
+      "Fake jewels",
+      "Blank book",
+      "Card deck",
+      "Dice set",
+      "Cook pots",
+      "Face paint",
+      "Whistle",
+      "Instrument",
+      "Quill & Ink",
+      "Small bell"
     ],
-    "armor": [
-        {
-            "name": "Shield",
-            "defense": 1,
-            "slot": 1,
-            "quality": 1
-        },
-        {
-            "name": "Helmet",
-            "defense": 1,
-            "slot": 1,
-            "quality": 1
-        },
-        {
-            "name": "Gambeson",
-            "defense": 12,
-            "slot": 1,
-            "quality": 3
-        },
-        {
-            "name": "Unarmored",
-            "defense": 11,
-            "slot": 0,
-            "quality": 0
-        }
-    ],
+    "armor": {
+      "shield": {
+        "name": "Shield",
+        "defense": 1,
+        "slot": 1,
+        "quality": 1,
+        "damage": "-",
+        "type": "Shield",
+        "hand": 1
+      },
+      "helmet": {
+        "name": "Helmet",
+        "defense": 1,
+        "slot": 1,
+        "quality": 1,
+        "damage": "-",
+        "type": "Helmet",
+        "hand": "-"
+      },
+      "gambeson": {
+        "name": "Gambeson",
+        "defense": 12,
+        "slot": 1,
+        "quality": 3,
+        "damage": "-",
+        "type": "Armor",
+        "hand": "-"
+      },
+      "brigandine": {
+        "name": "Brigandine",
+        "defense": 13,
+        "slot": 2,
+        "quality": 4,
+        "damage": "-",
+        "type": "Armor",
+        "hand": "-"
+      },
+      "chain": {
+        "name": "Chain",
+        "defense": 14,
+        "slot": 3,
+        "quality": 5,
+        "damage": "-",
+        "type": "Armor",
+        "hand": "-"
+      },
+      "unarmored": {
+        "name": "Unarmored",
+        "defense": 11,
+        "slot": 0,
+        "quality": 0,
+        "damage": "-",
+        "type": "Armor",
+        "hand": "-"
+      },
+      "bareheaded": {
+        "name": "Bareheaded",
+        "defense": 0,
+        "slot": 0,
+        "quality": 0,
+        "damage": "-",
+        "type": "Helmet",
+        "hand": "-"
+      },
+      "shieldless": {
+        "name": "Shieldless",
+        "defense": 0,
+        "slot": 0,
+        "quality": 0,
+        "damage": "-",
+        "type": "Shield",
+        "hand": "-"
+      }
+    },
     "weapons": [
-        {
-            "name": "Dagger",
-            "damage": "d6",
-            "slot": 1,
-            "hand": 1,
-            "quality": 3
-        },
-        {
-            "name": "Cudgel",
-            "damage": "d6",
-            "slot": 1,
-            "hand": 1,
-            "quality": 3
-        },
-        {
-            "name": "Sickle",
-            "damage": "d6",
-            "slot": 1,
-            "hand": 1,
-            "quality": 3
-        },
-        {
-            "name": "Staff",
-            "damage": "d6",
-            "slot": 1,
-            "hand": 1,
-            "quality": 3
-        },
-        {
-            "name": "Spear",
-            "damage": "d8",
-            "slot": 2,
-            "hand": 1,
-            "quality": 3
-        },
-        {
-            "name": "Sword",
-            "damage": "d8",
-            "slot": 2,
-            "hand": 1,
-            "quality": 3
-        },
-        {
-            "name": "Mace",
-            "damage": "d8",
-            "slot": 2,
-            "hand": 1,
-            "quality": 3
-        },
-        {
-            "name": "Axe",
-            "damage": "d8",
-            "slot": 2,
-            "hand": 1,
-            "quality": 3
-        },
-        {
-            "name": "Flail",
-            "damage": "d8",
-            "slot": 2,
-            "hand": 1,
-            "quality": 3
-        },
-        {
-            "name": "Halberd",
-            "damage": "d10",
-            "slot": 3,
-            "hand": 2,
-            "quality": 3
-        },
-        {
-            "name": "War Hammer",
-            "damage": "d10",
-            "slot": 3,
-            "hand": 2,
-            "quality": 3
-        },
-        {
-            "name": "Long Sword",
-            "damage": "d10",
-            "slot": 3,
-            "hand": 2,
-            "quality": 3
-        },
-        {
-            "name": "Battle Axe",
-            "damage": "d10",
-            "slot": 3,
-            "hand": 2,
-            "quality": 3
-        },
-        {
-            "name": "Sling",
-            "damage": "d4",
-            "slot": 1,
-            "hand": 1,
-            "quality": 3
-        },
-        {
-            "name": "Bow",
-            "damage": "d6",
-            "slot": 2,
-            "hand": 2,
-            "quality": 3
-        },
-        {
-            "name": "Crossbow",
-            "damage": "d8",
-            "slot": 3,
-            "hand": 2,
-            "quality": 3
-        }
+      {
+        "name": "Dagger",
+        "damage": "d6",
+        "slot": 1,
+        "hand": 1,
+        "quality": 3,
+        "defense": "-",
+        "type": "Weapon"
+      },
+      {
+        "name": "Cudgel",
+        "damage": "d6",
+        "slot": 1,
+        "hand": 1,
+        "quality": 3,
+        "defense": "-",
+        "type": "Weapon"
+      },
+      {
+        "name": "Sickle",
+        "damage": "d6",
+        "slot": 1,
+        "hand": 1,
+        "quality": 3,
+        "defense": "-",
+        "type": "Weapon"
+      },
+      {
+        "name": "Staff",
+        "damage": "d6",
+        "slot": 1,
+        "hand": 1,
+        "quality": 3,
+        "defense": "-",
+        "type": "Weapon"
+      },
+      {
+        "name": "Spear",
+        "damage": "d8",
+        "slot": 2,
+        "hand": 1,
+        "quality": 3,
+        "defense": "-",
+        "type": "Weapon"
+      },
+      {
+        "name": "Sword",
+        "damage": "d8",
+        "slot": 2,
+        "hand": 1,
+        "quality": 3,
+        "defense": "-",
+        "type": "Weapon"
+      },
+      {
+        "name": "Mace",
+        "damage": "d8",
+        "slot": 2,
+        "hand": 1,
+        "quality": 3,
+        "defense": "-",
+        "type": "Weapon"
+      },
+      {
+        "name": "Axe",
+        "damage": "d8",
+        "slot": 2,
+        "hand": 1,
+        "quality": 3,
+        "defense": "-",
+        "type": "Weapon"
+      },
+      {
+        "name": "Flail",
+        "damage": "d8",
+        "slot": 2,
+        "hand": 1,
+        "quality": 3,
+        "defense": "-",
+        "type": "Weapon"
+      },
+      {
+        "name": "Halberd",
+        "damage": "d10",
+        "slot": 3,
+        "hand": 2,
+        "quality": 3,
+        "defense": "-",
+        "type": "Weapon"
+      },
+      {
+        "name": "War Hammer",
+        "damage": "d10",
+        "slot": 3,
+        "hand": 2,
+        "quality": 3,
+        "defense": "-",
+        "type": "Weapon"
+      },
+      {
+        "name": "Long Sword",
+        "damage": "d10",
+        "slot": 3,
+        "hand": 2,
+        "quality": 3,
+        "defense": "-",
+        "type": "Weapon"
+      },
+      {
+        "name": "Battle Axe",
+        "damage": "d10",
+        "slot": 3,
+        "hand": 2,
+        "quality": 3,
+        "defense": "-",
+        "type": "Weapon"
+      },
+      {
+        "name": "Sling",
+        "damage": "d4",
+        "slot": 1,
+        "hand": 1,
+        "quality": 3,
+        "defense": "-",
+        "type": "Weapon"
+      },
+      {
+        "name": "Bow",
+        "damage": "d6",
+        "slot": 2,
+        "hand": 2,
+        "quality": 3,
+        "defense": "-",
+        "type": "Weapon"
+      },
+      {
+        "name": "Crossbow",
+        "damage": "d8",
+        "slot": 3,
+        "hand": 2,
+        "quality": 3,
+        "defense": "-",
+        "type": "Weapon"
+      }
     ]
-}
+  }

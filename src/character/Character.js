@@ -1,6 +1,7 @@
 import { DiceBag } from '../dice/DiceBag';
 import { Die } from '../dice/Die';
 import Gear from './Gear.json';
+import Names from './Names.json';
 import Traits from './Traits.json';
 
 export class Character {
@@ -13,27 +14,30 @@ export class Character {
         //randomized stats
         this.age = this.#rollAge();
         this.alignment = this.#rollAlignment();
-        this.copperPennies = this.#rollCopperPennies();
         this.hitPoints = this.#rollHitPoints();
+        this.name = this.#rollName();
 
         //core stats and items
         this.attributes = this.#rollAttributes();
         this.inventory = this.#rollInventory();
         this.traits = this.#rollTraits();
-
+        this.usedSlots = Object.values(this.inventory).reduce((sum, curr) => sum + curr.slot, 0);
         //derived stats
-        this.maxHenchmen = this.attributes.cha.bonus;
-        this.maxslots = this.attributes.con.defense;
+        this.damage = this.inventory.weapon.damage;
+        this.armorDefense = this.inventory.armor.defense + this.inventory.helmet.defense + this.inventory.shield.defense;
+        this.maxHenchmen = this.attributes.cha.bonus;  
+        this.maxSlots = this.attributes.con.defense;
     }
 
     #rollAge() {
-        const ageDie = new Die(20);
-        return ageDie.roll() + 17;
+        const ageDiceBag = new DiceBag([new Die(6), new Die(6), new Die(6)]);
+        return ageDiceBag.rollSum() + 15;
     }
 
     #rollAlignment() {
         let alignment = 'Neutral';
         const roll = new Die(20).roll();
+        
         if (roll <= 5) {
             alignment = 'Law';
         } else if (roll >= 16) {
@@ -41,6 +45,21 @@ export class Character {
         }
 
         return alignment;
+    }
+
+    #rollArmor() {
+        const roll = new Die(20).roll();
+        let armor = Gear.armor.unarmored;
+
+        if (roll === 20) {
+            armor = Gear.armor.chain; 
+        } else if (roll >= 15) {
+            armor = Gear.armor.brigandine;
+        } else if (roll >= 4) {
+            armor = Gear.armor.gambeson;
+        }
+
+        return armor;
     }
 
     #rollAttributes() {
@@ -63,36 +82,62 @@ export class Character {
         }
     }
 
-    #rollCopperPennies() {
-        const diceBag = new DiceBag([new Die(6), new Die(6), new Die(6)]);
-        return diceBag.rollSum() * 20;
-    }
-
     #rollHitPoints() {
         const hitDie = new Die(8);
         return hitDie.roll();
     }
 
     #rollInventory() {
-        const d4 = new Die(4);
-        const d16 = new Die(16);
         const d20 = new Die(20);
 
-        const weapon = Gear.weapons[d16.roll() - 1];
-        const armor = Gear.armor[d4.roll() - 1];
-        const item1 = Gear.dungeoneeringGear[d20.roll() - 1];
-        const item2 = Gear.dungeoneeringGear[d20.roll() - 1];
-        const item3 = Gear.generalGear1[d20.roll() - 1];
-        const item4 = Gear.generalGear2[d20.roll() - 1];
+        const weapon = this.#rollWeapons();
+        const armor = this.#rollArmor();
+        const peripherals = this.#rollPeripherals();
+
+        const item1 = {name: Gear.dungeoneeringGear[d20.roll() - 1], slot: 1};
+        const item2 = {name: Gear.dungeoneeringGear[d20.roll() - 1], slot: 1};
+        const item3 = {name: Gear.generalGear1[d20.roll() - 1], slot: 1};
+        const item4 = {name: Gear.generalGear2[d20.roll() - 1], slot: 1};
+        const ration = {name: "Ration (one day)", slot: 1}
+      
 
         return {
             weapon: weapon,
             armor: armor,
+            helmet: peripherals.helmet,
+            shield: peripherals.shield,
             item1: item1,
             item2: item2,
             item3: item3,
             item4: item4,
+            ration1: ration,
+            ration2: ration
         };
+    }
+
+    #rollName() {
+        const dN = new Die(Names.firstName.length);
+        const dM = new Die(Names.lastName.length);
+        const firstName = Names.firstName[dN.roll() - 1];
+        const lastName = Names.lastName[dM.roll() - 1];
+        return `${firstName} ${lastName}`;
+    }
+
+    #rollPeripherals() {
+        const roll = new Die(20).roll();
+        let helmet = Gear.armor.bareheaded;
+        let shield = Gear.armor.shieldless;
+
+        if (roll >= 14 && roll <= 16) {
+            helmet = Gear.armor.helmet; 
+        } else if (roll >= 17 && roll <= 19) {
+            shield = Gear.armor.shield;
+        } else if (roll === 20) {
+            helmet = Gear.armor.helmet;
+            shield = Gear.armor.shield;
+        }
+
+        return {helmet: helmet, shield: shield}
     }
 
     #rollTraits() {
@@ -121,5 +166,10 @@ export class Character {
             background: background,
             misfortune: misfortune,
         };
+    }
+
+    #rollWeapons() {
+        const d16 = new Die(16);
+        return Gear.weapons[d16.roll() - 1];
     }
 }
