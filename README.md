@@ -1,6 +1,6 @@
 # Build-a-Knave
 
-www.cjkg.github.io/knave-generator
+https://cjkg.github.io/knave-generator
 
 This was built as a project to better understand React. However, I also believe it to be the fullest and most accurate Knave character generator out there.
 
