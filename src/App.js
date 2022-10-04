@@ -27,7 +27,7 @@ function BasicStats(props) {
         <div class="col"><h5>Move Spd:</h5> {props.moveSpeed}'</div>
         <div class="col"><h5>Explore Spd:</h5> {props.explorationSpeed}'</div>
         <div class="w-100"></div>
-        <div class="col"><h5>Slots:</h5> {props.maxSlots}</div>
+        <div class="col"><h5>Max Slots:</h5> {props.maxSlots}</div>
         <div class="col"><h5>Max Henchmen:</h5> {props.maxHenchmen}</div>
       </div>
     </div>
