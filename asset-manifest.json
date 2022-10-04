@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/build-a-knave/static/css/main.f6479804.css",
-    "main.js": "/build-a-knave/static/js/main.deb8a232.js",
-    "static/js/787.da904a74.chunk.js": "/build-a-knave/static/js/787.da904a74.chunk.js",
-    "static/media/Sebaldus-Gotisch.ttf": "/build-a-knave/static/media/Sebaldus-Gotisch.000cc86c7a946a00cce0.ttf",
-    "index.html": "/build-a-knave/index.html",
-    "main.f6479804.css.map": "/build-a-knave/static/css/main.f6479804.css.map",
-    "main.deb8a232.js.map": "/build-a-knave/static/js/main.deb8a232.js.map",
-    "787.da904a74.chunk.js.map": "/build-a-knave/static/js/787.da904a74.chunk.js.map"
+    "main.css": "/knave-generator/static/css/main.89f6f7cb.css",
+    "main.js": "/knave-generator/static/js/main.5e7ef1ba.js",
+    "static/js/787.da904a74.chunk.js": "/knave-generator/static/js/787.da904a74.chunk.js",
+    "static/media/Sebaldus-Gotisch.ttf": "/knave-generator/static/media/Sebaldus-Gotisch.000cc86c7a946a00cce0.ttf",
+    "index.html": "/knave-generator/index.html",
+    "main.89f6f7cb.css.map": "/knave-generator/static/css/main.89f6f7cb.css.map",
+    "main.5e7ef1ba.js.map": "/knave-generator/static/js/main.5e7ef1ba.js.map",
+    "787.da904a74.chunk.js.map": "/knave-generator/static/js/787.da904a74.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f6479804.css",
-    "static/js/main.deb8a232.js"
+    "static/css/main.89f6f7cb.css",
+    "static/js/main.5e7ef1ba.js"
   ]
 }
