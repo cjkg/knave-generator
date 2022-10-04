@@ -28,12 +28,33 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.col {
+  margin-bottom: .5em;
 }
-table.table { width:auto; }
+
+div.container {
+  margin-bottom: 2em;
+}
+
+h1 {
+  font-family: sebaldus-gotisch;
+}
+
+h3 {
+  font-family: sebaldus-gotisch;
+}
+
+h5 {
+  font-family: sebaldus-gotisch;
+}
+
+table.table {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@font-face {
+  font-family: 'sebaldus-gotisch';
+  src: local('sebaldus-gotisch'), url(./fonts/Sebaldus-Gotisch.ttf) format('truetype');
+}

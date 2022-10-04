@@ -1,55 +1,60 @@
-import logo from './logo.svg';
 import './App.css';
-import { useTable } from 'react-table';
 import { Character } from './character/Character';
 
 const character = new Character();
 
 function Title(props) {
   return (
-    <div class="text-center">
-      <h1>Knave</h1>
+    <div class="container text-center">
+      <h1>Build-a-Knave</h1>
     </div>
   )
 }
 
 function BasicStats(props) {
   return (
-    <div class="container-fluid">
+    <div class="container">
       <div class="row text-center">
-        <div class="col-md-3"><strong>NAME:</strong> {props.name} </div>
-        <div class="col-md-3"><strong>AGE:</strong> {props.age}</div>
-        <div class="col-md-3"><strong>ALIGNMENT:</strong> {props.alignment}</div>
-        <div class="col-md-3"><strong>LEVEL:</strong> {props.level} </div>
-        <div class="col-md-3"><strong>HP:</strong> {props.hitPoints}/{props.hitPoints}</div>
-        <div class="col-md-3"><strong>DAMAGE:</strong> {props.damage}</div>
-        <div class="col-md-3"><strong>ARMOR DEFENSE:</strong> {props.armorDefense}</div>
-        <div class="col-md-3"><strong>ITEM SLOTS:</strong> {props.usedSlots}/{props.maxSlots}</div>
-        <div class="col-md-4"><strong>MOVE SPEED:</strong> {props.moveSpeed} feet</div>
-        <div class="col-md-4"><strong>EXPLORE SPEED:</strong> {props.explorationSpeed} feet</div>
-        <div class="col-md-4"><strong>MAX HENCHMEN:</strong> {props.maxHenchmen}</div>
+        <div class="col"><h5>Name:</h5> {props.name}</div>
+        <div class="col"><h5>Age:</h5> {props.age}</div>
+        <div class="col"><h5>Alignment:</h5> {props.alignment}</div>
+        <div class="w-100"></div>
+        <div class="col"><h5>Lvl:</h5> {props.level}</div>
+        <div class="col"><h5>HP:</h5> {props.hitPoints}/{props.hitPoints}</div>
+        <div class="col"><h5>Dmg:</h5> {props.damage}</div>
+        <div class="w-100"></div>
+        <div class="col"><h5>Armor Def:</h5> {props.armorDefense}</div>
+        <div class="col"><h5>Move Spd:</h5> {props.moveSpeed}'</div>
+        <div class="col"><h5>Explore Spd:</h5> {props.explorationSpeed}'</div>
+        <div class="w-100"></div>
+        <div class="col"><h5>Slots:</h5> {props.maxSlots}</div>
+        <div class="col"><h5>Max Henchmen:</h5> {props.maxHenchmen}</div>
       </div>
     </div>
+
   )
 }
 
 function Traits(props) {
   return (
-    <div class="container-fluid">
-      <div class="text-center">
-        <h3>Traits</h3>
-      </div>
+    <div class="container">
       <div class="row text-center">
-        <div class="col-md-2"><strong>PHYSIQUE:</strong> {props.physique} </div>
-        <div class="col-md-2"><strong>FACE:</strong> {props.face}</div>
-        <div class="col-md-2"><strong>SKIN:</strong> {props.skin}</div>
-        <div class="col-md-2"><strong>HAIR:</strong> {props.hair}</div>
-        <div class="col-md-2"><strong>CLOTHING:</strong> {props.clothing}</div>
-        <div class="col-md-2"><strong>VIRTUE:</strong> {props.virtue}</div>
-        <div class="col-md-2"><strong>VICE:</strong> {props.vice}</div>
-        <div class="col-md-2"><strong>SPEECH:</strong> {props.speech}</div>
-        <div class="col-md-2"><strong>BACKGROUND:</strong> {props.background}</div>
-        <div class="col-md-2"><strong>MISFORTUNE:</strong> {props.misfortune}</div>
+        <div>
+          <h3>Traits</h3>
+        </div>
+        <div class="row text-center">
+          <div class="col"><h5>Physique:</h5> {props.physique} </div>
+          <div class="col"><h5>Face:</h5> {props.face}</div>
+          <div class="col"><h5>Skin:</h5> {props.skin}</div>
+          <div class="col"><h5>Hair:</h5> {props.hair}</div>
+          <div class="col"><h5>Clothing:</h5> {props.clothing}</div>
+          <div class="w-100"></div>
+          <div class="col"><h5>Virtue:</h5> {props.virtue}</div>
+          <div class="col"><h5>Vice:</h5> {props.vice}</div>
+          <div class="col"><h5>Speech:</h5> {props.speech}</div>
+          <div class="col"><h5>Background:</h5> {props.background}</div>
+          <div class="col"><h5>Misfortune:</h5> {props.misfortune}</div>
+        </div>
       </div>
     </div>
   )
@@ -57,16 +62,13 @@ function Traits(props) {
 
 function Abilities(props) {
   return (
-    <div class="container-fluid">
-      <div class="text-center">
-        <h3>Abilities</h3>
-      </div>
+    <div class="container">
       <table class="table table-striped text-center">
         <thead>
           <tr>
-            <th scope='col'>Ability</th>
-            <th scope='col'>Bonus</th>
-            <th scope='col'>Defense</th>
+            <th scope='col'><h5>Ability</h5></th>
+            <th scope='col'><h5>Bonus</h5></th>
+            <th scope='col'><h5>Defense</h5></th>
           </tr>
         </thead>
         <tbody>
@@ -107,21 +109,21 @@ function Abilities(props) {
 }
 
 function WarGear(props) {
-  return(
-    <div class="container-fluid">
+  return (
+    <div class="container">
       <div class="text-center">
         <h3>War Gear</h3>
       </div>
       <table class="table table-striped text-center">
         <thead>
           <tr>
-            <th scope='col'>Type</th>
-            <th scope='col'>Name</th>
-            <th scope='col'>Damage</th>
-            <th scope='col'>Defense</th>
-            <th scope='col'>Quality</th>
-            <th scope='col'>Hands</th>
-            <th scope='col'>Slots</th>
+            <th scope='col'><h5>Type</h5></th>
+            <th scope='col'><h5>Name</h5></th>
+            <th scope='col'><h5>Dmg</h5></th>
+            <th scope='col'><h5>Def</h5></th>
+            <th scope='col'><h5>Quality</h5></th>
+            <th scope='col'><h5>Hands</h5></th>
+            <th scope='col'><h5>Slots</h5></th>
           </tr>
         </thead>
         <tbody>
@@ -168,16 +170,16 @@ function WarGear(props) {
 }
 
 function Inventory(props) {
-  return(
-    <div class="container-fluid">
+  return (
+    <div class="container">
       <div class="text-center">
         <h3>Inventory</h3>
       </div>
       <table class="table table-striped text-center">
         <thead>
           <tr>
-            <th scope='col'>Name</th>
-            <th scope='col'>Slots</th>
+            <th scope='col'><h5>Name</h5></th>
+            <th scope='col'><h5>Slots</h5></th>
           </tr>
         </thead>
         <tbody>
@@ -207,7 +209,26 @@ function Inventory(props) {
       </table>
     </div>
   )
-  }
+}
+
+function Credits(props) {
+  return (
+    <div class="container">
+      <div class="text-center">
+        <h3>Credits</h3>
+      </div>
+      <p>
+        <strong>Knave</strong> is by Ben Milton and can be bought <a href='https://www.drivethrurpg.com/product/250888/Knave'>here</a>.
+      </p>
+      <p>
+        This page was built by Chris Gibilisco, and inspired by <a href='https://unwarysage.github.io/scurvy'>Scurvy</a> and John Riccardi's <a href='https://riccjohn.github.io/knave-character-generator/'>Knave Character Generator.</a>
+      </p>
+      <p>
+        The wonderful list of random names is taken with thanks from a post by <a href='https://www.reddit.com/r/DnDBehindTheScreen/comments/50pcg1/a_post_about_names_names_for_speakers_of_the/'>OrkishBlade.</a>
+      </p>
+    </div>
+  )
+}
 
 function App() {
   return (
@@ -218,6 +239,7 @@ function App() {
       <Traits {...character.traits} />
       <WarGear {...character.inventory} />
       <Inventory {...character.inventory} />
+      <Credits />
     </div>
   );
 }
