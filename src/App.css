@@ -36,15 +36,7 @@ div.container {
   margin-bottom: 2em;
 }
 
-h1 {
-  font-family: sebaldus-gotisch;
-}
-
-h3 {
-  font-family: sebaldus-gotisch;
-}
-
-h5 {
+h1, h3, h5 {
   font-family: sebaldus-gotisch;
 }
 

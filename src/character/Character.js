@@ -21,7 +21,7 @@ export class Character {
         this.attributes = this.#rollAttributes();
         this.inventory = this.#rollInventory();
         this.traits = this.#rollTraits();
-        this.usedSlots = Object.values(this.inventory).reduce((sum, curr) => sum + curr.slot, 0);
+        this.usedSlots = Object.values(this.inventory).reduce((sum, curr) => sum + curr.slot, 0); //This doesn't work for some reason
 
         //derived stats
         this.damage = this.inventory.weapon.damage;
@@ -100,7 +100,6 @@ export class Character {
         const item3 = {name: Gear.generalGear1[d20.roll() - 1], slot: 1};
         const item4 = {name: Gear.generalGear2[d20.roll() - 1], slot: 1};
         const ration = {name: "Ration (one day)", slot: 1};
-        const ration2 = {name: "Ration (one day)", slot: 1};
 
         return {
             weapon: weapon,
@@ -112,7 +111,7 @@ export class Character {
             item3: item3,
             item4: item4,
             ration1: ration,
-            ration2: ration2,
+            ration2: ration,
         };
     }
 
