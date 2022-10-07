@@ -1,4 +1,4 @@
-export class DiceBag {
+class DiceBag {
     constructor(diceArray) {
         this.diceArray = diceArray;
         this.diceCount = diceArray.length;
@@ -18,3 +18,5 @@ export class DiceBag {
         return Math.min(...roll);
     }
 }
+
+export default DiceBag;

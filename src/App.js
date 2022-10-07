@@ -1,12 +1,12 @@
 import './App.css';
-import { Character } from './character/Character';
-import Title from './components/Title';
-import BasicStats from './components/BasicStats';
-import Traits from './components/Traits';
+import Character from './character/Character';
 import Abilities from './components/Abilities';
-import WarGear from './components/WarGear';
-import Inventory from './components/Inventory';
+import BasicStats from './components/BasicStats';
 import Credits from './components/Credits';
+import Inventory from './components/Inventory';
+import Title from './components/Title';
+import Traits from './components/Traits';
+import WarGear from './components/WarGear';
 
 const character = new Character();
 

@@ -1,10 +1,10 @@
-import { DiceBag } from '../dice/DiceBag';
-import { Die } from '../dice/Die';
+import DiceBag from '../dice/DiceBag';
+import Die from '../dice/Die';
 import Gear from './Gear.json';
 import Names from './Names.json';
 import Traits from './Traits.json';
 
-export class Character {
+class Character {
     constructor() {
         //fixed stats
         this.level = 1;
@@ -173,3 +173,5 @@ export class Character {
         return Gear.weapons[d16.roll() - 1];
     }
 }
+
+export default Character;

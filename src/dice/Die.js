@@ -1,4 +1,4 @@
-export class Die {
+class Die {
     constructor(sides) {
         this.sides = sides;
     }
@@ -7,3 +7,5 @@ export class Die {
         return Math.floor(Math.random() * this.sides) + 1;
     }
 }
+
+export default Die;
